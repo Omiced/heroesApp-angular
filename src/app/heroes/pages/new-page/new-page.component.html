@@ -1,0 +1,48 @@
+<h1>Editar/Agregar Hero <small>superman</small></h1>
+<mat-divider class="mb-2"> </mat-divider>
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+        <div class="grid">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Super hero</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Alter ego</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Primera aparicion</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Personajes</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Publisher</mat-label>
+            <mat-select required>
+              <mat-option *ngFor="let publisher of publishers">
+                {{ publisher.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="flex justify-content-evenly">
+          <button mat-flat-button color="warn">Borrar</button>
+          <button mat-flat-button color="primary">
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img src="" alt="imagen del heroe" mat-card-img />
+    </mat-card>
+  </div>
+</div>
